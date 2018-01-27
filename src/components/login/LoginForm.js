@@ -18,12 +18,12 @@ class LoginForm extends React.Component {
   }
 
   componentDidUpdate() {
-    const { isAuthenticated } = this.props;
-    if (isAuthenticated) {
-      console.log(this.props);
-      alert('Successfully logged in');
-    }
-    console.log(store.getState());
+    // const { isAuthenticated } = this.props;
+    // if (isAuthenticated) {
+    //   console.log(this.props);
+    //   alert('Successfully logged in');
+    // }
+    // console.log(store.getState());
   }
 
   handleChange(e) {
@@ -46,6 +46,12 @@ class LoginForm extends React.Component {
     username: '',
     password: ''
     });
+    const { isAuthenticated } = this.props;
+    if (!isAuthenticated) {
+      alert("Unsuccessful Login");
+    } else {
+      alert("Successful Login");
+    }
   }
 
   render() {
