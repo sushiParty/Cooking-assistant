@@ -1,8 +1,6 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
 import { push } from 'react-router-redux';
-import RaisedButton from 'material-ui/RaisedButton';
-import { TextFormField, PasswordFormField} from '../field/TextFieldComponents';
 
 
 const validate = values => {
@@ -24,11 +22,12 @@ class LoginForm extends React.Component {
 		const { isAuthenticated } = this.props;
 
 		if(isAuthenticated)
-			console.log('Successfully log in');
+			alert('Successfully log in');
 	}
 
 	submitForm(val){
-		this.props.attemptLogin(val);
+		this.props.attemptLogin(document.getElementById("identifier").value,
+			document.getElementById("password").value);
 	}
 
 	render() {
@@ -36,24 +35,15 @@ class LoginForm extends React.Component {
 
 		return(
 			<div>
-				<form onSubmit={ handleSubmit((values) => {
-					this.submitForm(values)
-				})}>
+				<form onSubmit={this.submitForm}>
 				<div>
-					<TextFormField
-						name="identifier"
-						floatingLabelText="Username"/>
+					<input id="identifier" type="text" placeholder="Username" />
 				</div>
 				<div>
-					<PasswordFormField
-						name="password"
-						floatingLabelText="Password"/>
+					<input id="password" type="password" placeholder="Password" />
 				</div>
 				<div>
-					<RaisedButton className="RaisedButton"
-								label="Login"
-								primary type="submit"
-								style={{ width: '100%' }}/>
+				<button className="ui button" role="button">Login</button>
 				</div>
 				</form>
 				{
@@ -68,6 +58,5 @@ class LoginForm extends React.Component {
 
 // Decorate with redux-form
 export default reduxForm({
-	form: 'LoginForm',
-	validate
+	form: 'LoginForm'
 })(LoginForm)
