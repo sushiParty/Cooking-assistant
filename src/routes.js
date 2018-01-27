@@ -5,12 +5,13 @@ import createHistory from 'history/createBrowserHistory';
 import { Provider } from 'react-redux';
 import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 
-import configureStore from './store'
+import configureStore from './store';
 import { loadState } from './util/localStorage';
 
 import Layout from './components/Layout';
 
 import Login from './pages/login';
+import Main from './components/main/Main.jsx';
 
 const persistedState = loadState();
 
@@ -30,7 +31,8 @@ export default class routes extends Component {
         <ConnectedRouter history={history}>
           <Layout>
             <Switch>
-              <Route exact path="/" component={Login}/>
+              <Route exact path="/" component={ Login }/>
+              <Route exact path="/Home" component={ Main }/>
             </Switch>
           </Layout>
         </ConnectedRouter>

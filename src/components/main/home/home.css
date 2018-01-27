@@ -1,3 +1,11 @@
+.home-header {
+    text-align: center;
+    margin: 20px;
+}
+
 .home-image {
-    width: 200px;
+    width: 350px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
 }

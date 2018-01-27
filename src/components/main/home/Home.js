@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './home.css';
 import { fire, storage } from '../../../fire.js';
-import img from '../../../static/img/1.jpg';
 
 class Home extends Component {
 
@@ -32,7 +31,7 @@ class Home extends Component {
 	console.log("Unable to retrieve image: " + error);
       });
     });
- }
+  }
 
   componentDidMount() {
     setTimeout(() => {
@@ -43,18 +42,16 @@ class Home extends Component {
   };
 
   render() {
-   // console.log(this.state.imageUrls);
+    // console.log(this.state.imageUrls);
     console.log("render");
     return (
       <div className="">
-	<div>RECIPES</div>
+	<div className="home-header">Featured Recipes</div>
 	<div className="images-container">
 	  {
 	    this.state.imageUrls.map((url) =>{
 	      return(
-		<div>
-		  <img src={url}/>
-		</div>
+		<img className="home-image" src={url}/>
 	      );
 	    })
 	  }
