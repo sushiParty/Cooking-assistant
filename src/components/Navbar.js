@@ -4,14 +4,14 @@ class Navbar extends Component {
   render() {
     return (
       <div className= "Navbar">
-        <div class="ui vertical menu">
-          <div class="item">
+        <div className="ui vertical menu">
+          <div className="item">
             <Link to="/ " > My Recipes </Link>
           </div>
-          <div class="link item">
+          <div className="link item">
             <Link to="/"> Saved Recipes </Link>
           </div>
-          <div class="link item">
+          <div className="link item">
             <Link to="/" > Create New Recipe </Link>
           </div>
         </div>
