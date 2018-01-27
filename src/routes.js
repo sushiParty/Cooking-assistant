@@ -10,7 +10,7 @@ import { loadState } from './util/localStorage';
 
 import Layout from './components/Layout';
 
-import Login from './components/login/login.js';
+import Login from './pages/login';
 
 const persistedState = loadState();
 
@@ -24,6 +24,7 @@ const store = configureStore(persistedState, middleware);
 
 export default class routes extends Component {
   render() {
+    console.log(store.getState());
     return(
       <Provider store={ store }>
         <ConnectedRouter history={history}>
