@@ -10,7 +10,7 @@ import { loadState } from './util/localStorage';
 
 import Layout from './components/Layout';
 
-import Login from './components/login/login.js';
+import Login from './components/Navbar.js';
 
 const persistedState = loadState();
 

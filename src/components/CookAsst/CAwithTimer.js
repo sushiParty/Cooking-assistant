@@ -63,13 +63,13 @@ class CAwithTimer extends Component {
                             // onComplete={myCallback}
                              />
 
-        <button type="button" onClick={this.startClock}> Start </button>
-        <button type="button" onClick={this.pauseClock}> Pause </button>
+        <button type="button" class="ui button" onClick={this.startClock}> Start </button>
+        <button type="button" class="ui button" onClick={this.pauseClock}> Pause </button>
 
         <br />
         <br />
         <br />
-        <button type="button"> Next </button>
+        <button type="button" class="ui button" > Next </button>
 
       </div>
 
