@@ -5,8 +5,12 @@ import createHistory from 'history/createBrowserHistory';
 import { Provider } from 'react-redux';
 import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 
-import configureStore from './store';
+import configureStore from './store'
 import { loadState } from './util/localStorage';
+
+import Layout from './components/Layout';
+
+import Login from './pages/login';
 
 const persistedState = loadState();
 
@@ -20,11 +24,16 @@ const store = configureStore(persistedState, middleware);
 
 export default class routes extends Component {
   render() {
+    console.log(store.getState());
     return(
       <Provider store={ store }>
         <ConnectedRouter history={history}>
-
-        </ConnectedRouter
+          <Layout>
+            <Switch>
+              <Route exact path="/" component={Login}/>
+            </Switch>
+          </Layout>
+        </ConnectedRouter>
       </Provider>
     );
   }
