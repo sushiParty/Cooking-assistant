@@ -1,4 +1,4 @@
-import firebase from 'firebase'
+import firebase from 'firebase';
 
 var config = {
     apiKey: "AIzaSyCrnGbSIMkD2h09fCZd43sAKcVsnrPODeM",
@@ -8,5 +8,8 @@ var config = {
     storageBucket: "cooking-assistant-b3183.appspot.com",
     messagingSenderId: "992162769843"
   };
-  var fire = firebase.initializeApp(config);
-  export default fire;
+
+const fire = firebase.initializeApp(config);
+const storage = firebase.storage();
+
+export { fire, storage };
