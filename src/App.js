@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import fire from './fire';
-import Home from './components/main/home/home.jsx';
+import Home from './components/main/home/Home.js';
 
 class App extends Component {
   render() {
