@@ -4,6 +4,7 @@ import { store } from '../../routes.js';
 import { push } from 'react-router-redux';
 import { Button, Form } from 'semantic-ui-react';
 import './login-form.css';
+import img from '../../static/img/login_background.jpg';
 
 class LoginForm extends React.Component {
 
@@ -16,15 +17,6 @@ class LoginForm extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  componentDidUpdate() {
-    // const { isAuthenticated } = this.props;
-    // if (isAuthenticated) {
-    //   console.log(this.props);
-    //   alert('Successfully logged in');
-    // }
-    // console.log(store.getState());
   }
 
   handleChange(e) {
@@ -59,23 +51,26 @@ class LoginForm extends React.Component {
     const { handleSubmit, loginError } = this.props;
 
     return(
-      <div className="login-form">
-	<Form>
-	  <Form.Field className="login-field">
-	    <input
-	      type="text"
-	      placeholder="Username"
-	      onChange={this.handleChange}
-	      />
-	  </Form.Field>
-	  <Form.Field>
-	    <input
-	      type="password"
-	      placeholder='Password'
-	      onChange={this.handleChange}/>
-	  </Form.Field>
-	  <Button type='submit' onClick={this.handleSubmit}>Submit</Button>
-	</Form>
+      <div className="login-wrapper">
+	<div className="login-form">
+	  <div className="login-header">Login to RECIPES</div>
+	  <Form>
+	    <Form.Field className="login-field">
+	      <input
+		type="text"
+		placeholder="Username"
+		onChange={this.handleChange}
+		/>
+	    </Form.Field>
+	    <Form.Field>
+	      <input
+		type="password"
+		placeholder='Password'
+		onChange={this.handleChange}/>
+	    </Form.Field>
+	    <Button type='submit' onClick={this.handleSubmit}>Submit</Button>
+	  </Form>
+	</div>
       </div>
     );
   };

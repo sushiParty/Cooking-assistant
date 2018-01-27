@@ -1,0 +1,18 @@
+.login-wrapper {
+    height: 700px;
+    background-image: url("../../static/img/login_background.jpg");
+    background-repeat: no-repeat;
+    background-size: 2000px; 
+}
+
+.login-header {
+    font-size: 20px;
+    margin: 30px;
+}
+
+.login-form {
+    padding-top: 10rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 400px;
+}
