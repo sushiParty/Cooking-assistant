@@ -1,5 +1,5 @@
 import Request from 'superagent';
-import fire from '../fire';
+import { fire } from '../fire';
 
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESSFUL';
 export const LOGIN_FAIL = 'LOGIN_FAIL';
