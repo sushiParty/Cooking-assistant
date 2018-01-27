@@ -24,7 +24,7 @@ const history = createHistory();
 //Build the middleware for intercepting and dispatching navigation actions
 const middleware = routerMiddleware(history);
 
-const store = configureStore(persistedState, middleware);
+export const store = configureStore(persistedState, middleware);
 
 export default class routes extends Component {
   render() {
