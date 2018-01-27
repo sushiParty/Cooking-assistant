@@ -3,6 +3,7 @@ import { reduxForm } from 'redux-form';
 import { store } from '../../routes.js';
 import { push } from 'react-router-redux';
 import { Button, Form } from 'semantic-ui-react';
+import './login-form.css';
 
 class LoginForm extends React.Component {
 
@@ -58,9 +59,9 @@ class LoginForm extends React.Component {
     const { handleSubmit, loginError } = this.props;
 
     return(
-      <div>
+      <div className="login-form">
 	<Form>
-	  <Form.Field>
+	  <Form.Field className="login-field">
 	    <input
 	      type="text"
 	      placeholder="Username"
@@ -75,12 +76,6 @@ class LoginForm extends React.Component {
 	  </Form.Field>
 	  <Button type='submit' onClick={this.handleSubmit}>Submit</Button>
 	</Form>
-	<div>
-	{
-	  loginError.length > 0 &&
-	    <h4 style={{ color: '#F86E60' }}> { loginError } </h4>
-	}
-	</div>
       </div>
     );
   };
