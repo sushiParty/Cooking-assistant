@@ -11,7 +11,9 @@ class Navbar extends Component {
             <img className="profilePic" src={portrait} />
             <a > John Francis </a>
           </div>
-
+          <div class="link item">
+            <a > Home </a>
+          </div>
           <div class="link item">
             <a > My Recipes </a>
           </div>

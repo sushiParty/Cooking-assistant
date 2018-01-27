@@ -19,7 +19,10 @@ class CAwithoutTimer extends Component {
         <li> things </li>
         <img src={cookImg} />
         <br />
-        <button type="button" class="ui button"> Next </button>
+        <button class="ui right labeled icon button">
+          <i class="right arrow icon"></i>
+          Next
+        </button>
 
       </div>
 

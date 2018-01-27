@@ -11,10 +11,12 @@ class CAwithTimer extends Component {
     this.state = {
       paused: true,
       timeRemaining: 100,
+      originalTime: 1000
     };
 
     this.pauseClock = this.pauseClock.bind(this);
     this.startClock = this.startClock.bind(this);
+    this.reloadClock = this.reloadClock.bind(this);
   }
 
   componentWillMount
@@ -35,6 +37,22 @@ class CAwithTimer extends Component {
     }
   }
 
+  reloadClock() {
+      this.setState({
+        seconds: this.getNewSeconds()
+      });
+      console.log(this.state.originalTime);
+      console.log(this.state.timeRemaining);
+  }
+
+  getNewSeconds = () => {
+    //Note: This library only restart timer when we supply different seconds
+    if(this.props.seconds !== this.state.seconds) {
+      return this.props.seconds;
+    } else {
+      return this.props.seconds + 0.0000001;
+    }
+  }
 
 
   render() {
@@ -63,13 +81,17 @@ class CAwithTimer extends Component {
                             // onComplete={myCallback}
                              />
 
-        <button type="button" class="ui button" onClick={this.startClock}> Start </button>
-        <button type="button" class="ui button" onClick={this.pauseClock}> Pause </button>
+        <button type="button" className="ui button" onClick={this.startClock}> Start </button>
+        <button type="button" className="ui button" onClick={this.pauseClock}> Pause </button>
+        <button type="button" className="ui button" onClick={this.reloadClock}> Reset </button>
 
         <br />
         <br />
         <br />
-        <button type="button" class="ui button" > Next </button>
+        <button class="ui right labeled icon button">
+          <i class="right arrow icon"></i>
+          Next
+        </button>
 
       </div>
 
