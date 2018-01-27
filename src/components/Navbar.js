@@ -6,13 +6,17 @@ class Navbar extends Component {
       <div className= "Navbar">
         <div class="ui vertical menu">
           <div class="item">
-            <Link to="/ " > My Recipes </Link>
+            <a > User Infomation </a>
+          </div>
+
+          <div class="link item">
+            <a > My Recipes </a>
           </div>
           <div class="link item">
-            <Link to="/"> Saved Recipes </Link>
+            <a > Saved Recipes </a>
           </div>
           <div class="link item">
-            <Link to="/" > Create New Recipe </Link>
+            <a > Create New Recipe </a>
           </div>
         </div>
       </div>

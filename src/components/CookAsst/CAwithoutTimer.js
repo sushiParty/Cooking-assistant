@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import fire from '.././fire';
 
 
-class CookAssistant extends Component {
+class CAwithoutTimer extends Component {
   render() {
     return (
-      <div className="CookAssistant">
-        
+      <div className="CAwithoutTimer">
+
       </div>
     );
   }
