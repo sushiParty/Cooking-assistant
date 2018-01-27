@@ -6,7 +6,7 @@ class Main extends Component {
   render() {
     return (
       <div>
-	<Home/>
+	       <Home />
       </div>
     );
   }
