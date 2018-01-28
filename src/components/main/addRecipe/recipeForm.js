@@ -10,7 +10,7 @@ class RecipeForm extends Component {
         this.handleUserInput = this.handleUserInput.bind(this);
         this.saveRecipe = this.saveRecipe.bind(this);
     }
-    
+
     handleUserInput(e) {
         this.setState({
             newRecipeContent: e.target.value,
@@ -28,10 +28,10 @@ class RecipeForm extends Component {
 
     render() {
         return (
-            <div className="formWrapper text-center">
-                <input className="recipeInput recipe-header"
+            <div className="formWrapper text-center align-input">
+                <input className="recipeInput"
                 placeholder="Write a new recipe..." value={this.state.newRecipeContent} onChange={this.handleUserInput}/>
-                <button className="recipeButton recipe-header" onClick={this.saveRecipe}>Add Recipe</button>
+                <button className="recipeButton" onClick={this.saveRecipe}>Add Recipe</button>
             </div>
         )
     }
