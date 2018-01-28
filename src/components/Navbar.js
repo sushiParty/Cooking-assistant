@@ -33,7 +33,7 @@ class Navbar extends Component {
           <Menu.Item name='Search' active={activeItem === 'Search'} onClick={this.handleItemClick} >Search</Menu.Item>
           </Link>
 
-          <Link to="/">
+          <Link to="/addRecipe">
           <Menu.Item name='Create New Recipes' active={activeItem === 'Create New Recipes'} onClick={this.handleItemClick}>Create New Recipes</Menu.Item>
           </Link>
 

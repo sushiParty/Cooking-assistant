@@ -11,10 +11,11 @@ import { loadState } from './util/localStorage';
 import Layout from './components/Layout';
 
 import Login from './pages/login';
-import Main from './components/main/Main.jsx';
+import Main from './components/main/Main.js';
 import CookAsst from './pages/CookAsst/CAwithoutTimer.js'
 import CookAsstTimer from './pages/CookAsst/CAwithTimer.js'
 import ViewRecipe from './pages/RecipeView.js'
+import addRecipe from './components/main/addRecipe/recipes.js'
 
 const persistedState = loadState();
 
@@ -36,6 +37,7 @@ export default class routes extends Component {
             <Switch>
               <Route exact path="/" component={ Login }/>
               <Route path="/home" component={ Main }/>
+              <Route path="/addRecipe" component={addRecipe}/>
               // <Route path="/myrecipes" component={ Main }/>
               // <Route path="/savedrecipes" component={ Main }/>
               <Route path="/cookingassistant" component={ CookAsst }/>
