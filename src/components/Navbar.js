@@ -5,7 +5,7 @@ import { Sidebar, Segment, Button, Menu } from 'semantic-ui-react';
 import './navbar.css';
 
 import SearchBar from './SearchBar.js';
-import Main from './main/Main.jsx';
+import Main from './main/Main.js';
 
 class Navbar extends Component {
   state = {
