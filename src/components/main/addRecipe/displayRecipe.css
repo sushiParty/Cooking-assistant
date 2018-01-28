@@ -1,0 +1,9 @@
+.recipe-header {
+    text-align: center;
+    margin: 20px;
+}
+
+.align-side {
+    display: inline-block;
+    margin: 20px;
+}
