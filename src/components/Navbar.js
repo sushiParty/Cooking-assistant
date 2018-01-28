@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import portrait from '../static/img/portrait.jpg';
 import { Switch, Route, Link } from 'react-router-dom';
 
-import { Sidebar, Segment, Button, Icon, Header, Menu } from 'semantic-ui-react';
+import { Sidebar, Segment, Button, Menu } from 'semantic-ui-react';
 import './navbar.css';
 
-import Main from './main/Main.jsx';
 import SearchBar from './SearchBar.js';
-
+import Main from './main/Main.jsx';
 
 class Navbar extends Component {
   state = {
@@ -39,15 +37,15 @@ class Navbar extends Component {
               <Menu.Item name='Home' active={activeItem === 'Home' } onClick={this.handleItemClick}> Home </Menu.Item>
             </Link>
 
-            <Link to="/">
+            <Link to="/my-recipes">
               <Menu.Item name='My Recipes' active={activeItem === 'My Recipes'} onClick={this.handleItemClick}>My Recipes</Menu.Item>
             </Link>
 
-            <Link to="/">
+            <Link to="/saved-recipes">
               <Menu.Item name='Saved Recipes' active={activeItem === 'Saved Recipes'} onClick={this.handleItemClick}>Saved Recipes</Menu.Item>
             </Link>
 
-            <Link to="/">
+            <Link to="/new-recipe">
               <Menu.Item name='New Recipe' active={activeItem === 'New Recipe'} onClick={this.handleItemClick}> New Recipe </Menu.Item>
             </Link>
 
@@ -55,11 +53,7 @@ class Navbar extends Component {
           </Sidebar>
           <Sidebar.Pusher>
             <Segment basic>
-	      <Switch>
-		<Route path="/home" component={ Main }/>
-              // <Route path="/myrecipes" component={ Main }/>
-              // <Route path="/savedrecipes" component={ Main }/>
-	      </Switch>
+	      <Main/>
             </Segment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './home.css';
 import { fire, storage } from '../../../fire.js';
+import { Header } from 'semantic-ui-react';
 
 class Home extends Component {
 
@@ -44,7 +45,7 @@ class Home extends Component {
   render() {
     return (
       <div className="">
-	<div className="home-header">Featured Recipes</div>
+	<Header className="home-header">Featured Recipes</Header>
 	<div className="images-container">
 	  {
 	    this.state.imageUrls.map((url) =>{
