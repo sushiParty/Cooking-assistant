@@ -38,12 +38,10 @@ class Home extends Component {
       this.setState({
   	render: true
       });
-    }, 2000);
+    }, 1250);
   };
 
   render() {
-    // console.log(this.state.imageUrls);
-    console.log("render");
     return (
       <div className="">
 	<div className="home-header">Featured Recipes</div>
@@ -51,7 +49,7 @@ class Home extends Component {
 	  {
 	    this.state.imageUrls.map((url) =>{
 	      return(
-		<img className="home-image" src={url}/>
+		<img key={url} className="home-image" src={url}/>
 	      );
 	    })
 	  }

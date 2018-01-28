@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Navbar from './Navbar'
+import Navbar from './Navbar';
+import { Routes, Switch } from 'react-router-dom';
 
 
 export default class Layout extends Component {
   render() {
     return (
-      <MuiThemeProvider>
-        <div>
-          <Navbar />
-        </div>
-        <div>
-          {this.props.children}
-        </div>
-      </MuiThemeProvider>
+      <div className="layout-wrapper">
+        <Navbar />
+        {this.props.children}
+      </div>
     );
   }
 }

@@ -1,0 +1,14 @@
+.navbar-button {
+    display: inline-block;
+    margin: 10px;
+}
+
+.top-search-bar {
+    margin: 10px;
+    width: 80%;
+    display: inline-block;
+}
+
+.navbar-wrapper {
+    height: 700px;
+}
