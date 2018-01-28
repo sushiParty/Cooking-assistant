@@ -1,9 +1,13 @@
 .recipe-header {
-    text-align: center;
-    margin: 20px;
+  font-size: 50px;
+  margin: 30px;
 }
 
 .align-side {
     display: inline-block;
-    margin: 20px;
+    margin-left: 33px;
+}
+
+.align-input {
+  margin-left: 33px;
 }

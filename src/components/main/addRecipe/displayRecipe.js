@@ -15,10 +15,10 @@ class DisplayRecipe extends Component {
   handleRemoveRecipe(id) {
     this.props.removeRecipe(id);
   }
-    
+
   render(props) {
       return (
-        <div className="displayRecipe recipe-header">
+        <div className="displayRecipe">
           <div className="recipeContent align-side"> {this.recipeContent}</div>
           <div className="closebtn align-side" onClick={() => this.handleRemoveRecipe(this.recipeId)}>
             &times;

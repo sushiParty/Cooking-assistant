@@ -13,7 +13,7 @@ class Recipes extends Component {
         this.removeRecipe = this.removeRecipe.bind(this);
 
         this.db = fire.database().ref().child('recipes');
-       
+
         this.state = {
             recipes: [
             ],
@@ -56,7 +56,7 @@ class Recipes extends Component {
 
     addRecipe(recipe) {
        this.db.push().set({recipeContent: recipe})
-        
+
     }
 
     removeRecipe(recipeId) {
@@ -65,23 +65,24 @@ class Recipes extends Component {
 
     render() {
         return (
-            <div className="recipeWrapper recipe-header">
-                <div className="recipeHeader">
+            <div className="recipeWrapper">
+                <div className="recipe-header">
                     <div className="heading"> Recipe List </div>
                 </div>
                 <div className="recipeBody">
-                {
-                    this.state.recipes.map((recipe) => {
-                        return (
-                            <DisplayRecipe recipeContent={recipe.recipeContent} recipeId={recipe.id} key={recipe.id} removeRecipe={this.removeRecipe}/>
-                        )
-                    })
-                }
+                  {
+
+                      this.state.recipes.map((recipe) => {
+                          return (
+                              <DisplayRecipe recipeContent={recipe.recipeContent} recipeId={recipe.id} key={recipe.id} removeRecipe={this.removeRecipe}/>
+                          )
+                      })
+                  }
                 </div>
                 <div className="recipesFooter">
                     <RecipeForm addRecipe={this.addRecipe} />
                 </div>
-            </div>  
+            </div>
         );
     }
 }
