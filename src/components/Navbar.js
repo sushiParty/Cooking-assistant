@@ -36,7 +36,11 @@ class Navbar extends Component {
         <Sidebar.Pushable as={Segment}>
           <Sidebar as={Menu} animation='slide out' width='thin' visible={visible} vertical inverted>
 	    <Link to="/home">
-              <Menu.Item name='My Recipes' active={activeItem === 'My Recipes' } onClick={this.handleItemClick}> My Recipes </Menu.Item>
+              <Menu.Item name='Home' active={activeItem === 'Home' } onClick={this.handleItemClick}> Home </Menu.Item>
+            </Link>
+
+            <Link to="/">
+              <Menu.Item name='My Recipes' active={activeItem === 'My Recipes'} onClick={this.handleItemClick}>My Recipes</Menu.Item>
             </Link>
 
             <Link to="/">
@@ -44,7 +48,7 @@ class Navbar extends Component {
             </Link>
 
             <Link to="/">
-              <Menu.Item name='Create New Recipes' active={activeItem === 'Create New Recipes'} onClick={this.handleItemClick}>Create New Recipes</Menu.Item>
+              <Menu.Item name='New Recipe' active={activeItem === 'New Recipe'} onClick={this.handleItemClick}> New Recipe </Menu.Item>
             </Link>
 
             <Menu.Item name='Logout' active={activeItem === 'Logout'} onClick={this.handleItemClick} />
