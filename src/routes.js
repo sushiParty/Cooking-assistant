@@ -39,7 +39,6 @@ export default class routes extends Component {
             <Switch>
 
               <Route exact path="/" component={ Login }/>
-              <Route path="/home" component={ Main }/>
               <Route path="/cookingassistant" component={ CookAsst }/>
               <Route path="/cookingassistanttimer" component={ CookAsstTimer }/>
               <Route path="/viewrecipe" component={ ViewRecipe }/>
